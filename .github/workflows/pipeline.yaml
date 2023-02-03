@@ -53,7 +53,7 @@ jobs:
       with:
         name: greetings-jar
         path: |
-          build/libs # or path/to/artifact
+          build/libs
           test-script.sh
 
     - name: Set Output
@@ -75,7 +75,11 @@ jobs:
       uses: actions/download-artifact@v3       
       with:
         name: greetings-jar
-        
+
+    - name: Display Directory
+      shell: bash
+      run: ls -al /build/libs
+
     - name: Execute test
       shell: bash
       run: | 
