@@ -78,7 +78,7 @@ jobs:
 
     - name: Display Directory
       shell: bash
-      run: ls -al /build/libs
+      run: ls -al
 
     - name: Execute test
       shell: bash
